@@ -577,3 +577,100 @@ a {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
+/* --- МОБИЛЬНОЕ МЕНЮ (БУРГЕР) --- */
+@media (max-width: 768px) {
+    /* Показываем значок бургера */
+    /* --- Внутри @media (max-width: 768px) --- */
+
+    /* Контейнер для кнопки */
+    .burger {
+        display: block;
+        width: 30px;
+        height: 20px;
+        position: relative;
+        z-index: 2000;
+        cursor: pointer;
+    }
+
+    /* Рисуем 3 полоски */
+    .burger span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: #333; /* Цвет полосок (черный) */
+        border-radius: 3px;
+        opacity: 1;
+        left: 0;
+        transition: 0.25s ease-in-out; /* Плавность анимации */
+    }
+
+    /* Расставляем полоски по местам */
+    .burger span:nth-child(1) { top: 0px; }
+    .burger span:nth-child(2) { top: 9px; }
+    .burger span:nth-child(3) { top: 18px; }
+
+    /* --- АНИМАЦИЯ ПРЕВРАЩЕНИЯ В КРЕСТИК --- */
+    
+    /* 1. Верхняя полоска поворачивается */
+    .burger.active span:nth-child(1) {
+        top: 9px;
+        transform: rotate(135deg);
+        background: #fff; /* Становится белой на темном фоне */
+    }
+
+    /* 2. Средняя исчезает */
+    .burger.active span:nth-child(2) {
+        opacity: 0;
+        left: -60px; /* Улетает влево */
+    }
+
+    /* 3. Нижняя полоска поворачивается */
+    .burger.active span:nth-child(3) {
+        top: 9px;
+        transform: rotate(-135deg);
+        background: #fff; /* Становится белой */
+    }
+
+    /* Скрываем и настраиваем само меню */
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Спрятано справа за экраном */
+        width: 100%;
+        height: 100vh; /* На всю высоту */
+        background: rgba(0, 0, 0, 0.95); /* Темный фон */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.4s ease;
+        z-index: 1500;
+    }
+
+    /* Класс, который добавляет JS для открытия */
+    .nav.active {
+        right: 0; /* Выезжает на экран */
+    }
+
+    /* Ссылки в мобильном меню */
+    .nav a {
+        color: #fff;
+        font-size: 1.5rem;
+        margin: 15px 0;
+        margin-left: 0; /* Убираем старый отступ */
+    }
+
+    .nav a:hover {
+        color: var(--primary-color);
+    }
+    
+    /* Кнопка "Позвонить" в мобильном меню */
+    .btn-call {
+        margin-top: 20px;
+        background: var(--primary-color);
+        color: #333 !important;
+        padding: 10px 30px;
+    }
+}
