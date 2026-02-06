@@ -19,7 +19,7 @@
           <a href="#about">О нас</a>
           <a href="gallery.html">Галерея</a>
           <a href="#contacts">Контакты</a>
-          <a href="tel:+71234567890" class="btn-call">Позвонить нам</a>
+          <a href="tel:+77777777" class="btn-call">Позвонить нам</a>
         </nav>
         <div class="burger">☰</div>
       </div>
@@ -55,7 +55,88 @@
         <button class="next-slide">&#10095;</button>
       </div>
     </section>
+    <section class="news-section container">
+      <h2>Новости и события</h2>
+      <div class="news-grid">
+        <article class="news-card">
+          <div class="news-image">
+            <img
+              src="https://images.unsplash.com/photo-1513297887119-d46091b24bfa?auto=format&fit=crop&w=500&q=60"
+              alt="Новый год"
+            />
+            <span class="news-date">25 Дек 2023</span>
+          </div>
+          <div class="news-content">
+            <h3>Новогодний утренник</h3>
+            <p>
+              Приглашаем родителей на праздничную елку! В программе: Дед Мороз,
+              подарки и выступление старшей группы.
+            </p>
+            <a
+              href="#"
+              class="news-link"
+              data-title="Новогодний утренник"
+              data-text="Приглашаем родителей на праздничную елку! В программе: Дед Мороз, подарки, выступление старшей группы и чаепитие. Начало в 10:00. Просьба принести сменную обувь."
+              data-img="https://images.unsplash.com/photo-1513297887119-d46091b24bfa?auto=format&fit=crop&w=800&q=80"
+            >
+              Подробнее &rarr;
+            </a>
+          </div>
+        </article>
 
+        <article class="news-card">
+          <div class="news-image">
+            <img
+              src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=500&q=60"
+              alt="Меню"
+            />
+            <span class="news-date">10 Янв 2024</span>
+          </div>
+          <div class="news-content">
+            <h3>Обновление меню</h3>
+            <p>
+              Мы добавили больше сезонных фруктов и овощей в рацион. Появились
+              безлактозные каши по запросу.
+            </p>
+            <a
+              href="#"
+              class="news-link"
+              data-title="Обновление меню"
+              data-text="Мы пересмотрели рацион питания. Теперь у нас больше сезонных фруктов (яблоки, груши) и овощных салатов. По запросу родителей добавлены безлактозные каши на завтрак."
+              data-img="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80"
+            >
+              Подробнее &rarr;
+            </a>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <div class="news-image">
+            <img
+              src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=500&q=60"
+              alt="Английский"
+            />
+            <span class="news-date">15 Янв 2024</span>
+          </div>
+          <div class="news-content">
+            <h3>Открытый урок английского</h3>
+            <p>
+              В следующий вторник пройдет открытый урок для родителей.
+              Посмотрите, как дети учат язык в игре.
+            </p>
+            <a
+              href="#"
+              class="news-link"
+              data-title="Открытый урок английского"
+              data-text="В следующий вторник пройдет открытый урок. Родители смогут увидеть, как дети изучают животных и цвета в игровой форме. Преподаватель: Елена Сергеевна."
+              data-img="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80"
+            >
+              Подробнее &rarr;
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
     <section id="split-section" class="split-section container">
       <div class="split-left">
         <h2>Наши будни</h2>
@@ -196,7 +277,29 @@
         &copy; 2023 Детский сад "Солнышко". Все права защищены.
       </div>
     </footer>
-
+    <div id="news-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <img id="modal-img" src="" alt="" />
+        <h3 id="modal-title"></h3>
+        <p id="modal-text"></p>
+      </div>
+    </div>
+    <div id="lightbox" class="lightbox">
+      <span class="close-lightbox">&times;</span>
+      <div class="lightbox-content-wrapper">
+        <img id="lightbox-img" src="" alt="Просмотр" />
+        <a
+          id="lightbox-download"
+          href=""
+          download
+          target="_blank"
+          class="btn-download"
+        >
+          ⬇ Скачать фото
+        </a>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
